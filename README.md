@@ -1,4 +1,4 @@
-# Sms-Bomber
+# Sms-Bomber(BomberPLus)
 ##Send Sms unlimitedly!
 
 How to use in Termux :
