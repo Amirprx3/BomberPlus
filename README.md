@@ -19,4 +19,4 @@ ______________________________________________
 
 8.git clone https://github.com/Amirprx3/BomberPlus.git
 _______________________________________________________
-This script is for iranian numbers!(+98)
+This script is for iranian phone numbers!(+98)
