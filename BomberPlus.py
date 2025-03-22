@@ -77,8 +77,7 @@ def torob(phone):
             return True # torob
     except:
         pass
-    # Channel: @BlackWacker  - :)
-    # Coder: @Pooya_Killer - :)
+ 
 def snapfood(phone):
     sfoodU = 'https://snappfood.ir/mobile/v2/user/loginMobileWithNoPass?lat=35.774&long=51.418&optionalClient=WEBSITE&client=WEBSITE&deviceType=WEBSITE&appVersion=8.1.0&UDID=39c62f64-3d2d-4954-9033-816098559ae4&locale=fa'
     sfoodH = {'accept': 'application/json, text/plain, */*',
