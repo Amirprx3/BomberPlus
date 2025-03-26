@@ -18,6 +18,11 @@ try:
 except ImportError:
     system("python3 -m pip install requests")
 
+try:
+    from requests import get, post
+except ImportError:
+    system("python3 -m pip install fake_useragent")
+
 # Colors
 r = '\033[31;1m'  # Red
 g = '\033[32;1m'  # Green
@@ -268,7 +273,7 @@ def smarket(phone):
             return True #SnapMarket
     except:
         pass
-    # MadeBy: @Amirprx3
+    
 def gapfilm(phone):
     gaJ = {
     "Type": 3,
@@ -301,7 +306,7 @@ def gapfilm(phone):
             return True
     except:
         pass
-
+# MadeBy: @Amirprx3
 def sTrip(phone):
     sTripH = {"Host": "www.snapptrip.com","User-Agent": ua.random,"Accept": "*/*","Accept-Language": "fa","Accept-Encoding": "gzip, deflate, br","Content-Type": "application/json; charset=utf-8","lang": "fa","X-Requested-With": "XMLHttpRequest","Content-Length": "134","Origin": "https://www.snapptrip.com","Connection": "keep-alive","Referer": "https://www.snapptrip.com/","Cookie": "route=1597937159.144.57.429702; unique-cookie=KViXnCmpkTwY7rY; appid=g*-**-*; ptpsession=g--196189383312301530; _ga=GA1.2.118271034.1597937174; _ga_G8HW6QM8FZ=GS1.1.1597937169.1.0.1597937169.60; _gid=GA1.2.561928072.1597937182; _gat_UA-107687430-1=1; analytics_campaign={%22source%22:%22google%22%2C%22medium%22:%22organic%22}; analytics_session_token=445b5d83-abeb-7ffd-091e-ea1ce5cfcb52; analytics_token=2809eef3-a3cf-7b9c-4191-8d8be8e5c6b7; yektanet_session_last_activity=8/20/2020; _hjid=b1148e0d-8d4b-4a3d-9934-0ac78569f4ea; _hjAbsoluteSessionInProgress=0; MEDIAAD_USER_ID=6648f107-1407-4c83-97a1-d39c9ec8ccad","TE": "Trailers"}
     sTripD = {"lang":"fa","country_id":"860","password":"snaptrippass","mobile_phone":"0"+phone.split("+98")[1],"country_code":"+98","email":"example@gmail.com"}
@@ -656,7 +661,7 @@ def basalam(phone):
             return True
     except:
         pass
-# MadeBy: @Amirprx3
+
 def ghabzino(phone):
     ghJ = {
     "Parameters": {
@@ -795,7 +800,7 @@ def limome(phone):
             return True
     except:
         pass
-# MadeBy: @Amirprx3
+
 def bimito(phone):
     liU = f"https://bimito.com/api/core/app/user/checkLoginAvailability/%7B%22phoneNumber%22%3A%220{phone.split('+98')[1]}%22%7D"
     liH = {'accept': 'application/json, text/plain, */*',
@@ -835,7 +840,7 @@ def bimitoVip(phone):
             return True
     except:
         pass
-
+# MadeBy: @Amirprx3
 def seebirani(phone):
     liJ = {
     "username": "0"+phone.split('+98')[1]
@@ -854,7 +859,7 @@ def seebirani(phone):
         return True
     except:
         pass
-# MadeBy: @Amirprx3
+
 def mihanpezeshk(phone):
     gaD = f'_token=bBSxMx7ifcypKJuE8qQEhahIKpcVApWdfZXFkL8R&mobile={"0"+phone.split("+98")[1]}&recaptcha='
     gaU = 'https://www.mihanpezeshk.com/ConfirmCodeSbm_Patient'
@@ -868,7 +873,7 @@ def mihanpezeshk(phone):
 'referer': 'https://www.mihanpezeshk.com/confirmcodePatient',
 'upgrade-insecure-requests': '1',
 'user-agent': ua.random}
-    try:
+    try:# MadeBy: @Amirprx3
         gaR = post(url=gaU, headers=gaH, data=gaD)
         print(f'{g}(MihanPezeshk) {a}Code Was Sent')
         return True
@@ -898,7 +903,7 @@ def mek(phone):
 	"prevDomainUrl": None,
 	"prevUrl": None,
 	"referrer": "https://www.google.com/"
-}# MadeBy: @Amirprx3
+}
     try:
         meR = post(url=meU, headers=meH, data=meD).json()
         if meR['isSuccess']:
@@ -934,7 +939,7 @@ def shahreketab(phone):
         json_data = {"mobile": phone}
         try:
             requests.post(url, json=json_data, headers=headers)
-        except:
+        except:# MadeBy: @Amirprx3
             pass
 
 def ketabrah(phone):
@@ -966,7 +971,7 @@ def alopeyk(phone):
             requests.post(url, json=json_data, headers=headers)
         except:
             pass
-# MadeBy: @Amirprx3
+
 def okcs(phone):
         url = "https://okcs.com/api/v1/auth/send-otp"
         headers = {
@@ -999,7 +1004,7 @@ def bitpin(phone):
 
 def nobitex(phone):
         url = "https://api.nobitex.ir/auth/send-otp/"
-        headers = {# MadeBy: @Amirprx3
+        headers = {
             "Host": "api.nobitex.ir", "content-length": "22", "accept": "application/json",
             "user-agent": ua.random, "content-type": "application/json", "origin": "https://nobitex.ir",
             "sec-fetch-site": "same-site", "sec-fetch-mode": "cors", "sec-fetch-dest": "empty",
@@ -1011,7 +1016,7 @@ def nobitex(phone):
             requests.post(url, json=json_data, headers=headers)
         except:
             pass
-# MadeBy: @Amirprx3
+
 def wallex(phone):
     url = "https://api.wallex.ir/v1/auth/send-otp"
     headers = {
@@ -1045,7 +1050,7 @@ def sms_vip(phone, time_delay):
     print_slow(f"{g}Delay: {y}{time_delay}s")
     print_slow(f"{p}╚═══════════════════════════════════╝")
     sleep(1)
-    # MadeBy: @Amirprx3
+    
     running = True
     try:
         while running:
@@ -1065,7 +1070,7 @@ def sms_vip(phone, time_delay):
 # Phone number validation
 def is_phone(phone: str):
     if match(r"(\+989|^989|09|9)[0-9]{9}", phone):
-        return sub(r"(\+989|^989|09)", "+989", phone)
+        return sub(r"(\+989|^989|09)", "+989", phone)# MadeBy: @Amirprx3
     return False
 
 # List of small random bomb ASCII arts
@@ -1105,7 +1110,7 @@ bomb_ascii_arts = [
 ]
 
 # Main menu with random bomb ASCII art
-def main_menu(): # MadeBy: @Amirprx3
+def main_menu():
     system('clear' if name == 'posix' else 'cls')
     random_bomb = random.choice(bomb_ascii_arts)
     print_slow(f"""
@@ -1127,7 +1132,7 @@ def main_menu(): # MadeBy: @Amirprx3
     {r}[0] {y}Exit
 {p}══════════════════════════════════════════════════════
 """)
-    choice = input(f"{g}[?] {y}Enter Your Choice (0-3): {a}")
+    choice = input(f"{g}[?] {y}Enter Your Choice (0-2): {a}")
     return choice
 
 # Main execution
@@ -1155,7 +1160,7 @@ def main():
             target_email = input(f"{g}[?] {y}Enter Target Email: {a}")
             sender_email = input(f"{g}[?] {y}Enter Your Email: {a}")
             sender_password = input(f"{g}[?] {y}Enter Your Email App Password: {a}")
-            try:
+            try:# MadeBy: @Amirprx3
                 count = int(input(f"{g}[?] {y}Enter Number of Emails [Default=10]: {a}") or 10)
                 delay = float(input(f"{g}[?] {y}Enter Delay Between Emails (seconds) [Default=0.1]: {a}") or 1.0)
             except ValueError:
@@ -1168,7 +1173,7 @@ def main():
             break
         
         else:
-            print_slow(f"{r}[-] {a}Invalid Choice! Please select 0, 1, 2, or 3.")
+            print_slow(f"{r}[-] {a}Invalid Choice! Please select 0, 1 or 2.")
             sleep(1)
 
 if __name__ == "__main__":
