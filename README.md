@@ -24,11 +24,12 @@
 
 - Python 3.x
 - `requests` library
+- `fake-useragent` library
 
 Install requirements (if not already installed):
 
 ```bash
-pip install requests
+pip install requests fake-useragent
 ```
 
 ### 🚀 Usage
