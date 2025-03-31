@@ -96,11 +96,12 @@ Never share your App Password with anyone. Keep it safe and use it only in trust
 
 - پایتون ۳ به بالا
 - نصب کتابخانه `requests`
+- نصب کتابخانه `fake-useragent` 
 
 برای نصب پیش‌نیاز:
 
 ```bash
-pip install requests
+pip install requests fake-useragent
 ```
 
 ### 🚀 نحوه استفاده
